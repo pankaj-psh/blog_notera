@@ -45,7 +45,7 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
 
 <Layout
 	themeControlVariant="post"
-	title={title ?? "Notera Blog"}
+	title={title ? `${title} | Pankaj Sharma` : "Blogs | Pankaj Sharma"}
 	description={description}
 	type="article"
 	publishedTime={pubDate}
