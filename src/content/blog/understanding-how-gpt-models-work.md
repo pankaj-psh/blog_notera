@@ -1,3 +1,11 @@
+---
+title: "Understanding How GPT Models Work — A Deep Yet Intuitive Guide"
+description: "A deep dive into how GPT models work under the hood, from tokenization and embeddings to self-attention and next-token prediction."
+pubDate: 2026-10-25
+tags: ["ai", "machine-learning", "gpt", "llm", "deep-learning"]
+draft: false
+---
+
 # Understanding How GPT Models Work — A Deep Yet Intuitive Guide
 
 ## Introduction

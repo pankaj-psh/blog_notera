@@ -1,3 +1,11 @@
+---
+title: "Design and Architecture of a Scalable Search Autocomplete System"
+description: "A practical guide to designing a high-throughput, low-latency search autocomplete system that handles billions of queries."
+pubDate: 2026-10-25
+tags: ["system-design", "backend", "scalability", "architecture"]
+draft: false
+---
+
 # Design and Architecture of a Scalable Search Autocomplete System
 
 ## 1. Introduction
