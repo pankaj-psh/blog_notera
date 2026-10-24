@@ -33,6 +33,10 @@ const list = posts
 		const db = b.pubDate ? new Date(b.pubDate).getTime() : 0;
 		return db - da;
 	});
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+	? import.meta.env.BASE_URL
+	: `${import.meta.env.BASE_URL}/`;
 ---
 
 <Layout
@@ -43,7 +47,7 @@ const list = posts
 	<script is:inline>
 		(function(){ try { var v = localStorage.getItem('blogViewMode'); document.body.dataset.blogViewMode = (v === 'grid' || v === 'list') ? v : 'list'; } catch(e) { document.body.dataset.blogViewMode = 'list'; } })();
 	</script>
-	<script type="module">
+	<script>
 		import "../scripts/pretext-balance";
 	</script>
 	<main class="blog-page" aria-label="Blog">
@@ -58,7 +62,7 @@ const list = posts
 			<ul class="post-list">
 				{list.map((post) => (
 					<li class="post-item">
-						<a class="post-link" href={`/blog/${post.slug}`}>
+						<a class="post-link" href={`${baseUrl}blog/${post.slug}`}>
 							<span class="post-title">{post.title}</span>
 							{post.pubDate && (
 								<time class="post-date" datetime={post.pubDate}>
@@ -87,7 +91,7 @@ const list = posts
 			) : (
 				<div class="post-grid">
 					{list.map((post) => (
-						<a class="post-card" href={`/blog/${post.slug}`}>
+						<a class="post-card" href={`${baseUrl}blog/${post.slug}`}>
 							<h2 class="post-card-title">{post.title}</h2>
 							{post.pubDate && (
 								<time class="post-card-date" datetime={post.pubDate}>

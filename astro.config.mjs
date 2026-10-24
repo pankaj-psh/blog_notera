@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://blog.notera.space',
+	site: 'https://pankaj-psh.github.io',
+	base: '/blogs',
 	integrations: [sitemap()],
 });

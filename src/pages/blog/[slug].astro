@@ -37,6 +37,10 @@ export async function getStaticPaths() {
 const { frontmatter, Content } = Astro.props;
 const { title, description, pubDate } = frontmatter as Frontmatter;
 const tags = Array.isArray((frontmatter as any)?.tags) ? ((frontmatter as any).tags as string[]) : undefined;
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+	? import.meta.env.BASE_URL
+	: `${import.meta.env.BASE_URL}/`;
 ---
 
 <Layout
@@ -48,7 +52,7 @@ const tags = Array.isArray((frontmatter as any)?.tags) ? ((frontmatter as any).t
 	tags={tags}
 >
 	<div class="back-to-blog-wrap">
-		<a href="/" class="theme-slider-box back-to-blog-btn" aria-label="Back to blog">
+		<a href={baseUrl} class="theme-slider-box back-to-blog-btn" aria-label="Back to blog">
 			<svg class="icon-view icon-back-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 				<path d="m9 14l-4-4l4-4"/>
 				<path d="M5 10h11a4 4 0 1 1 0 8h-1"/>
