@@ -21,6 +21,16 @@ html {
 	box-sizing: inherit;
 }
 
+::selection {
+	background-color: var(--color-selection-bg);
+	color: var(--color-selection-ink);
+}
+
+::-moz-selection {
+	background-color: var(--color-selection-bg);
+	color: var(--color-selection-ink);
+}
+
 body {
 	margin: 0 !important;
 	padding: 0 !important;
